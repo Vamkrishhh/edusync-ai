@@ -1,0 +1,71 @@
+"""
+Generates a valid demonstration PDF file for users to test the PDF upload feature.
+"""
+
+import os
+
+
+def generate_valid_sample_pdf(filepath: str = "sample_dbms_notes.pdf") -> str:
+    """Creates a simple valid PDF with DBMS lecture notes for testing upload."""
+    content = """%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 380 >>
+stream
+BT
+/F1 16 Tf
+50 720 Td
+(CS301: Database Management Systems - Sample Notes) Tj
+/F1 12 Tf
+0 -30 Td
+(Unit 3: Normalization and Functional Dependencies) Tj
+0 -20 Td
+(1NF: Every attribute must contain atomic values.) Tj
+0 -20 Td
+(2NF: 1NF plus no partial dependency on composite candidate keys.) Tj
+0 -20 Td
+(3NF: 2NF plus no transitive dependencies on candidate keys.) Tj
+0 -20 Td
+(BCNF: For every functional dependency X -> Y, X must be a superkey.) Tj
+0 -30 Td
+(Unit 4: Transaction Management) Tj
+0 -20 Td
+(ACID Properties: Atomicity, Consistency, Isolation, Durability.) Tj
+0 -20 Td
+(Two-Phase Locking guarantees conflict serializability.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000224 00000 n 
+0000000657 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+726
+%%EOF
+"""
+    with open(filepath, "wb") as f:
+        f.write(content.encode("latin-1"))
+    return filepath
+
+
+if __name__ == "__main__":
+    path = generate_valid_sample_pdf()
+    print(f"Generated sample PDF at: {path}")

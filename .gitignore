@@ -1,0 +1,69 @@
+# Environment & Secrets
+.env
+.streamlit/secrets.toml
+secrets.toml
+
+# SQLite Databases (all test and production databases)
+*.db
+*.sqlite
+*.sqlite3
+
+# Python Cache & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary Files & Build Artifacts
+*.pyc
+*.pyo
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Screenshots and Generated Media
+*.png
+*.jpg
+*.jpeg
+*.gif
+app_screenshot.png
+ui_results.txt
+
+# Documentation Build Files (keep source MD files)
+# None for now - all MD files should be committed
+
+# Sample/Test PDFs (exclude sample_dbms_notes.pdf if not needed)
+# Uncomment if you don't want sample PDF in repo:
+# sample_dbms_notes.pdf
